@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Card } from "./Card"
 import "./TotalDeposit.css"
-import { AnchorEarn, CHAINS, NETWORKS } from "@anchor-protocol/anchor-earn";
+import { AnchorEarn, CHAINS, NETWORKS, DENOMS } from "@anchor-protocol/anchor-earn";
 
-const anchorEarn = new AnchorEarn({
-  chain: CHAINS.TERRA,
-  network: NETWORKS.BOMBAY_12,
-  mnemonic: '...',
-});
+// const anchorEarn = new AnchorEarn({
+//   chain: CHAINS.TERRA,
+//   network: NETWORKS.BOMBAY_12,
+//   mnemonic: '...',
+// });
 
 export const TotalDeposit = () => {
     const [deposit, setDeposit] = useState(0)
+    const [value, setValue] = useState();
 
     return (
         <Card title="Total Deposit">
